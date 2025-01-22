@@ -1,0 +1,305 @@
+@charset "utf-8";
+/* CSS Document */
+body {
+  margin: 0;
+  background-color: #279381;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#navbar {
+  background-color: #1B374E;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: block;
+  transition: top 0.3s;
+}
+
+#navbar a {
+  float: left;
+  display: block;
+  color: #F7F0EB;
+  text-align: center;
+  padding: 15px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+#navbar a:hover {
+  background-color: #0E2D49;
+  color: #F5E1D6;
+}
+
+
+
+/* zdjęcia na górze */
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+		
+
+
+/* Styl tabeli */
+table {
+    width: 100%; /* Tabela zajmuje całą szerokość dostępnej przestrzeni */
+    border-collapse: collapse; /* Zmniejsza odstępy między komórkami */
+    margin: 0 auto; /* Wycentrowanie tabeli */
+}
+
+/* Styl nagłówka tabeli */
+table thead tr th {
+    background-color: #3b5998; /* Kolor tła nagłówka */
+    color: #ffffff; /* Kolor tekstu w nagłówku */
+    font-weight: bold; /* Pogrubienie tekstu */
+    text-transform: uppercase; /* Wielkie litery */
+    padding: 10px; /* Odstępy wewnętrzne */
+    border: 1px solid #ddd; /* Ramka wokół nagłówka */
+}
+
+/* Styl komórek tabeli (naprzemienne kolory) */
+table tbody tr td:nth-child(even) {
+    background-color: #f0f0f0; /* Kolor tła dla parzystych kolumn */
+    padding: 10px; /* Odstępy wewnętrzne */
+    border: 1px solid #ddd; /* Ramka wokół komórek */
+}
+
+table tbody tr td:nth-child(odd) {
+    background-color: #ffffff; /* Kolor tła dla nieparzystych kolumn */
+    padding: 10px; /* Odstępy wewnętrzne */
+    border: 1px solid #ddd; /* Ramka wokół komórek */
+}
+
+/* Opcjonalnie: Styl dla komórek podczas najechania myszką */
+table tbody tr td:hover {
+    background-color: #e0e0e0; /* Zmiana koloru na jaśniejszy podczas najechania */
+}
+
+	
+
+	
+	
+
+/* Sekcja i stopka */	
+	section {
+            max-width: 60%;
+            margin: 20px auto;
+            background-color: #1F6248;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        	font-size: 1em;
+	}
+	
+	footer {           
+		
+	 max-width: 80%;
+     margin: 20px auto;
+     background-color: #1F6248;
+     padding: 20px;
+     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+     font-size: 0.5em;
+	 text-align: center;
+	}
+	
+		
+   
+
+ /* Menu boczne */      
+	body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        
+        .side-menu {
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            height: 40%;
+            width: 180px;
+            background-color: #154758;
+            color: white;
+            padding: 2px;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+            border-radius: 10px 0px 0px 10px;
+        	text-align: center;
+			margin-bottom: 20px;
+	}
+
+        
+        .side-menu ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .side-menu ul li {
+            margin: 20px 0;
+        }
+
+        .side-menu ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+			display: block;
+            padding: 8px 8px;
+            border-radius: 5px;
+            transition: background-color 0.3s;     	
+	}
+
+        .side-menu ul li a:hover {
+            background-color: #1B374E;
+        }
+
+        
+        .content {
+            margin-left: 200px;
+            padding: 10px;
+	}
+/*menu telefon*/
+	.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 150px;
+  background-color: #154758;
+  color: white;
+  padding: 10px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+  z-index: 10;
+}
+
+.mobile-menu ul {
+  list-style: none;
+  padding: 0;
+}
+
+.mobile-menu ul li {
+  margin: 20px 0;
+}
+
+.mobile-menu ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  display: block;
+  padding: 8px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+#menu-icon {
+  display: none;
+  position: fixed;
+  top: 8px;
+  left: 8px;
+  background-color: #1B374E;
+  color: #F7F0EB;
+  font-size: 30px;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 11;
+  border-radius: 5px;
+}	
+	
+	
+	/*Tablet*/
+@media (max-width: 1200px) and (min-width: 600px) {
+  .side-menu {
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    padding: 0;
+    text-align: center;
+  }
+
+  .side-menu h3,
+  .side-menu ul {
+    display: none;
+  }
+
+  .side-menu::after {
+    content: '\2630'; /* Ikona hamburgera */
+    font-size: 30px;
+    color: white;
+    display: block;
+    line-height: 50px;
+  }
+
+  .side-menu:hover {
+    height: auto;
+    width: 180px;
+    padding: 10px;
+  }
+
+  .side-menu:hover h3,
+  .side-menu:hover ul {
+    display: block;
+  }
+}
+ 
+	/*Telefon*/
+@media (max-width: 600px) {
+  #navbar {
+    flex-direction: column;
+    display: none;
+  }
+
+  #navbar.toggled {
+    display: flex;
+  }
+
+  .side-menu {
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    padding: 0;
+    text-align: center;
+  }
+
+  .side-menu h3,
+  .side-menu ul {
+    display: none;
+  }
+
+  .side-menu::after {
+    content: '\2630';
+    font-size: 30px;
+    color: white;
+    display: block;
+    line-height: 50px;
+  }
+
+  .side-menu:hover {
+    height: auto;
+    width: 180px;
+    padding: 10px;
+  }
+
+  .side-menu:hover h3,
+  .side-menu:hover ul {
+    display: block;
+  }
+
+#navbar {
+    display: none;
+  }
+#menu-icon {
+    display: block;
+  }	
+
+	}	
+
+		
